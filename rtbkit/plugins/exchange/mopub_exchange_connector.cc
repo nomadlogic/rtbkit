@@ -17,9 +17,9 @@
 #include <boost/lexical_cast.hpp>
 #include "jml/utils/file_functions.h"
 
-#include "crypto++/blowfish.h"
-#include "crypto++/modes.h"
-#include "crypto++/filters.h"
+#include "cryptopp/blowfish.h"
+#include "cryptopp/modes.h"
+#include "cryptopp/filters.h"
 
 
 using namespace std;

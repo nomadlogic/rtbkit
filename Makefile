@@ -4,7 +4,7 @@ FC := gfortran
 NODEJS_ENABLED:=1
 PYTHON_ENABLED:=0
 
-LOCAL_DIR?=$(HOME)/local
+LOCAL_DIR?=$(HOME)/scratch/local
 NODE_PREFIX:=$(LOCAL_DIR)
 VOWS?=./node_modules/vows/bin/vows
 COFFEE?=./node_modules/coffee-script/bin/coffee

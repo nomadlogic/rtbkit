@@ -10,7 +10,7 @@
 
 // User partition filter.
 #define CRYPTOPP_ENABLE_NAMESPACE_WEAK 1
-#include "crypto++/md5.h"
+#include "cryptopp/md5.h"
 
 
 using namespace std;
