@@ -1,5 +1,7 @@
 CXX ?= g++
-CXXFLAGS ?= $(INCLUDE) -pipe -Wall -Werror -Wno-sign-compare -Woverloaded-virtual -fPIC -m64 -ggdb -fno-omit-frame-pointer $(foreach dir,$(LOCAL_INCLUDE_DIR),-I$(dir)) -std=c++0x -Wno-deprecated-declarations
+# A3: not aborting on warn for now
+#CXXFLAGS ?= $(INCLUDE) -pipe -Wall -Werror -Wno-sign-compare -Woverloaded-virtual -fPIC -m64 -ggdb -fno-omit-frame-pointer $(foreach dir,$(LOCAL_INCLUDE_DIR),-I$(dir)) -std=c++0x -Wno-deprecated-declarations
+CXXFLAGS ?= $(INCLUDE) -pipe -Wall -Wno-sign-compare -Woverloaded-virtual -fPIC -m64 -ggdb -fno-omit-frame-pointer $(foreach dir,$(LOCAL_INCLUDE_DIR),-I$(dir)) -std=c++0x -Wno-deprecated-declarations
 CXXLINKFLAGS = -rdynamic $(foreach DIR,$(PWD)/$(BIN) $(PWD)/$(LIB) $(LOCAL_LIB_DIR),-L$(DIR) -Wl,--rpath-link,$(DIR)) -Wl,--rpath,\$$ORIGIN/../bin -Wl,--rpath,\$$ORIGIN/../lib -Wl,--copy-dt-needed-entries -Wl,--no-as-needed
 CXXLIBRARYFLAGS = -shared $(CXXLINKFLAGS) -lpthread
 CXXEXEFLAGS =$(CXXLINKFLAGS) -lpthread
@@ -8,7 +10,9 @@ CXXNODEBUGFLAGS := -O3 -DBOOST_DISABLE_ASSERTS -DNDEBUG
 CXXDEBUGFLAGS := -O1 -g3 -UBOOST_DISABLE_ASSERTS -UNDEBUG
 
 CC ?= gcc
-CFLAGS ?= $(INCLUDE) -pipe -Wall -Werror -Wno-sign-compare -O3 -fPIC -m64 -g -DNDEBUG -fno-omit-frame-pointer
+# A3: not aborting on warn for now
+#CFLAGS ?= $(INCLUDE) -pipe -Wall -Werror -Wno-sign-compare -O3 -fPIC -m64 -g -DNDEBUG -fno-omit-frame-pointer
+CFLAGS ?= $(INCLUDE) -pipe -Wall -Wno-sign-compare -O3 -fPIC -m64 -g -DNDEBUG -fno-omit-frame-pointer
 CDEDEBUGFLAGS := -O0 -g -UNDEBUG
 
 FC ?= gfortran

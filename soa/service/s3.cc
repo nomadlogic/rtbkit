@@ -23,10 +23,10 @@
 #include "xml_helpers.h"
 
 #define CRYPTOPP_ENABLE_NAMESPACE_WEAK 1
-#include "crypto++/sha.h"
-#include "crypto++/md5.h"
-#include "crypto++/hmac.h"
-#include "crypto++/base64.h"
+#include "cryptopp/sha.h"
+#include "cryptopp/md5.h"
+#include "cryptopp/hmac.h"
+#include "cryptopp/base64.h"
 
 #include <curlpp/cURLpp.hpp>
 #include <curlpp/Easy.hpp>
