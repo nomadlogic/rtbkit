@@ -21,6 +21,7 @@ LIBRECOSET_ZEROMQ_LINK := \
 
 $(eval $(call library,zeromq,$(LIBRECOSET_ZEROMQ_SOURCES),$(LIBRECOSET_ZEROMQ_LINK)))
 
+
 LIBSERVICES_SOURCES := \
 	transport.cc \
 	endpoint.cc \
@@ -37,14 +38,14 @@ LIBSERVICES_SOURCES := \
 	message_loop.cc \
 	loop_monitor.cc \
 	named_endpoint.cc \
-	zookeeper_configuration_service.cc \
-	zmq_endpoint.cc \
-	async_event_source.cc \
 	rest_service_endpoint.cc \
-	http_named_endpoint.cc \
 	rest_proxy.cc \
 	rest_request_router.cc \
 	rest_request_binding.cc \
+	zookeeper_configuration_service.cc \
+	zmq_endpoint.cc \
+	async_event_source.cc \
+	http_named_endpoint.cc \
 	runner.cc \
 	sink.cc \
 	zookeeper.cc \

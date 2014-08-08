@@ -1,6 +1,6 @@
 $(eval $(call nodejs_test,logger_js_test,logger,,,manual))
-$(eval $(call nodejs_test,remote_logger_test,logger))
-$(eval $(call test,remote_logger_test2,logger,boost))
+#$(eval $(call nodejs_test,remote_logger_test,logger))
+#$(eval $(call test,remote_logger_test2,logger,boost))
 $(eval $(call nodejs_test,filter_js_test,logger sync))
 $(eval $(call test,json_filter_test,logger,boost manual))
 
